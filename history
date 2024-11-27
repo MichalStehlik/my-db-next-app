@@ -1,0 +1,861 @@
+  5 |   globalPrisma.prisma = prisma;
+  6 | } {
+  page: '/'
+}
+ GET / 500 in 5145ms
+ GET /_next/static/webpack/5201db9f8caf9c56.webpack.hot-update.json 404 in 5164ms
+ ⨯ Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\michal.stehlik\source\repos\my-db-next-app\node_modules\@prisma\client\scripts\default-index.js:43:11)
+    at eval (src\lib\prisma.ts:3:45)
+    at (rsc)/./src/lib/prisma.ts (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:213:1)
+    at __webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at eval (webpack-internal:///(rsc)/./src/app/page.tsx:9:69)
+    at (rsc)/./src/app/page.tsx (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:202:1)
+    at Function.__webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at async getLayoutOrPageModule (webpack://next/dist/src/server/lib/app-dir-module.ts:29:10)
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:166:35)
+    at async (webpack://next/dist/src/server/app-render/create-component-tree.tsx:406:27)     
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:337:27)
+    at async getRSCPayload (webpack://next/dist/src/server/app-render/app-render.tsx:731:19)  
+    at async renderToStream (webpack://next/dist/src/server/app-render/app-render.tsx:1656:25)    at async renderToHTMLOrFlightImpl (webpack://next/dist/src/server/app-render/app-render.tsx:1353:19)
+    at async doRender (node_modules\next\src\server\base-server.ts:2666:21)
+    at async responseGenerator (node_modules\next\src\server\base-server.ts:3027:21)
+    at async DevServer.renderToResponseWithComponentsImpl (node_modules\next\src\server\base-server.ts:3039:23)
+    at async DevServer.renderPageComponent (node_modules\next\src\server\base-server.ts:3597:15)
+    at async DevServer.renderToResponseImpl (node_modules\next\src\server\base-server.ts:3659:23)
+    at async DevServer.pipeImpl (node_modules\next\src\server\base-server.ts:1698:20)
+    at async NextNodeServer.handleCatchallRenderRequest (node_modules\next\src\server\next-server.ts:1034:6)
+    at async DevServer.handleRequestImpl (node_modules\next\src\server\base-server.ts:1462:8) 
+    at async (node_modules\next\src\server\dev\next-dev-server.ts:514:13)
+    at async Span.traceAsyncFn (node_modules\next\src\trace\trace.ts:143:13)
+    at async DevServer.handleRequest (node_modules\next\src\server\dev\next-dev-server.ts:512:19)
+    at async invokeRender (node_modules\next\src\server\lib\router-server.ts:284:10)
+    at async handleRequest (node_modules\next\src\server\lib\router-server.ts:530:15)
+    at async requestHandlerImpl (node_modules\next\src\server\lib\router-server.ts:576:6)     
+    at async Server.requestListener (node_modules\next\src\server\lib\start-server.ts:146:6)  
+  1 | import { PrismaClient } from "@prisma/client/extension";
+  2 | const globalPrisma = global as unknown as { prisma: PrismaClient };
+> 3 | export const prisma = globalPrisma.prisma || new PrismaClient();
+    |                                             ^
+  4 | if (process.env.NODE_ENV !== "production") {
+  5 |   globalPrisma.prisma = prisma;
+  6 | } {
+  page: '/'
+}
+ ○ Compiling /_error ...
+ GET / 500 in 870ms
+ ✓ Compiled /_error in 1166ms (817 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\michal.stehlik\source\repos\my-db-next-app\node_modules\@prisma\client\scripts\default-index.js:43:11)
+    at eval (src\lib\prisma.ts:3:45)
+    at (rsc)/./src/lib/prisma.ts (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:213:1)
+    at __webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at eval (webpack-internal:///(rsc)/./src/app/page.tsx:9:69)
+    at (rsc)/./src/app/page.tsx (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:202:1)
+    at Function.__webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at async getLayoutOrPageModule (webpack://next/dist/src/server/lib/app-dir-module.ts:29:10)
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:166:35)
+    at async (webpack://next/dist/src/server/app-render/create-component-tree.tsx:406:27)     
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:337:27)
+    at async getRSCPayload (webpack://next/dist/src/server/app-render/app-render.tsx:731:19)  
+    at async renderToStream (webpack://next/dist/src/server/app-render/app-render.tsx:1656:25)    at async renderToHTMLOrFlightImpl (webpack://next/dist/src/server/app-render/app-render.tsx:1353:19)
+    at async doRender (node_modules\next\src\server\base-server.ts:2666:21)
+    at async responseGenerator (node_modules\next\src\server\base-server.ts:3027:21)
+    at async DevServer.renderToResponseWithComponentsImpl (node_modules\next\src\server\base-server.ts:3039:23)
+    at async DevServer.renderPageComponent (node_modules\next\src\server\base-server.ts:3597:15)
+    at async DevServer.renderToResponseImpl (node_modules\next\src\server\base-server.ts:3659:23)
+    at async DevServer.pipeImpl (node_modules\next\src\server\base-server.ts:1698:20)
+    at async NextNodeServer.handleCatchallRenderRequest (node_modules\next\src\server\next-server.ts:1034:6)
+    at async DevServer.handleRequestImpl (node_modules\next\src\server\base-server.ts:1462:8) 
+    at async (node_modules\next\src\server\dev\next-dev-server.ts:514:13)
+    at async Span.traceAsyncFn (node_modules\next\src\trace\trace.ts:143:13)
+    at async DevServer.handleRequest (node_modules\next\src\server\dev\next-dev-server.ts:512:19)
+    at async invokeRender (node_modules\next\src\server\lib\router-server.ts:284:10)
+    at async handleRequest (node_modules\next\src\server\lib\router-server.ts:530:15)
+    at async requestHandlerImpl (node_modules\next\src\server\lib\router-server.ts:576:6)     
+    at async Server.requestListener (node_modules\next\src\server\lib\start-server.ts:146:6)  
+  1 | import { PrismaClient } from "@prisma/client/extension";
+  2 | const globalPrisma = global as unknown as { prisma: PrismaClient };
+> 3 | export const prisma = globalPrisma.prisma || new PrismaClient();
+    |                                             ^
+  4 | if (process.env.NODE_ENV !== "production") {
+  5 |   globalPrisma.prisma = prisma;
+  6 | } {
+  page: '/'
+}
+ GET / 500 in 761ms
+ GET /_next/static/webpack/5201db9f8caf9c56.webpack.hot-update.json 404 in 720ms
+ ⨯ Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\michal.stehlik\source\repos\my-db-next-app\node_modules\@prisma\client\scripts\default-index.js:43:11)
+    at eval (src\lib\prisma.ts:3:45)
+    at (rsc)/./src/lib/prisma.ts (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:213:1)
+    at __webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at eval (webpack-internal:///(rsc)/./src/app/page.tsx:9:69)
+    at (rsc)/./src/app/page.tsx (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:202:1)
+    at Function.__webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at async getLayoutOrPageModule (webpack://next/dist/src/server/lib/app-dir-module.ts:29:10)
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:166:35)
+    at async (webpack://next/dist/src/server/app-render/create-component-tree.tsx:406:27)     
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:337:27)
+    at async getRSCPayload (webpack://next/dist/src/server/app-render/app-render.tsx:731:19)  
+    at async renderToStream (webpack://next/dist/src/server/app-render/app-render.tsx:1656:25)    at async renderToHTMLOrFlightImpl (webpack://next/dist/src/server/app-render/app-render.tsx:1353:19)
+    at async doRender (node_modules\next\src\server\base-server.ts:2666:21)
+    at async responseGenerator (node_modules\next\src\server\base-server.ts:3027:21)
+    at async DevServer.renderToResponseWithComponentsImpl (node_modules\next\src\server\base-server.ts:3039:23)
+    at async DevServer.renderPageComponent (node_modules\next\src\server\base-server.ts:3597:15)
+    at async DevServer.renderToResponseImpl (node_modules\next\src\server\base-server.ts:3659:23)
+    at async DevServer.pipeImpl (node_modules\next\src\server\base-server.ts:1698:20)
+    at async NextNodeServer.handleCatchallRenderRequest (node_modules\next\src\server\next-server.ts:1034:6)
+    at async DevServer.handleRequestImpl (node_modules\next\src\server\base-server.ts:1462:8) 
+    at async (node_modules\next\src\server\dev\next-dev-server.ts:514:13)
+    at async Span.traceAsyncFn (node_modules\next\src\trace\trace.ts:143:13)
+    at async DevServer.handleRequest (node_modules\next\src\server\dev\next-dev-server.ts:512:19)
+    at async invokeRender (node_modules\next\src\server\lib\router-server.ts:284:10)
+    at async handleRequest (node_modules\next\src\server\lib\router-server.ts:530:15)
+    at async requestHandlerImpl (node_modules\next\src\server\lib\router-server.ts:576:6)     
+    at async Server.requestListener (node_modules\next\src\server\lib\start-server.ts:146:6)  
+  1 | import { PrismaClient } from "@prisma/client/extension";
+  2 | const globalPrisma = global as unknown as { prisma: PrismaClient };
+> 3 | export const prisma = globalPrisma.prisma || new PrismaClient();
+    |                                             ^
+  4 | if (process.env.NODE_ENV !== "production") {
+  5 |   globalPrisma.prisma = prisma;
+  6 | } {
+  page: '/'
+}
+ GET / 500 in 227ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 579ms (367 modules)
+ GET /favicon.ico 200 in 653ms
+   Reload env: .env
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled / in 357ms (814 modules)
+ GET / 200 in 196ms
+ ⨯ Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\michal.stehlik\source\repos\my-db-next-app\node_modules\@prisma\client\scripts\default-index.js:43:11)
+    at eval (src\lib\prisma.ts:3:45)
+    at (rsc)/./src/lib/prisma.ts (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:213:1)
+    at __webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at eval (webpack-internal:///(rsc)/./src/app/page.tsx:9:69)
+    at (rsc)/./src/app/page.tsx (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:202:1)
+    at Function.__webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at async getLayoutOrPageModule (webpack://next/dist/src/server/lib/app-dir-module.ts:29:10)
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:166:35)
+    at async (webpack://next/dist/src/server/app-render/create-component-tree.tsx:406:27)     
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:337:27)
+    at async getRSCPayload (webpack://next/dist/src/server/app-render/app-render.tsx:731:19)  
+    at async renderToStream (webpack://next/dist/src/server/app-render/app-render.tsx:1656:25)    at async renderToHTMLOrFlightImpl (webpack://next/dist/src/server/app-render/app-render.tsx:1353:19)
+    at async doRender (node_modules\next\src\server\base-server.ts:2666:21)
+    at async responseGenerator (node_modules\next\src\server\base-server.ts:3027:21)
+    at async DevServer.renderToResponseWithComponentsImpl (node_modules\next\src\server\base-server.ts:3039:23)
+    at async DevServer.renderPageComponent (node_modules\next\src\server\base-server.ts:3597:15)
+    at async DevServer.renderToResponseImpl (node_modules\next\src\server\base-server.ts:3659:23)
+    at async DevServer.pipeImpl (node_modules\next\src\server\base-server.ts:1698:20)
+    at async NextNodeServer.handleCatchallRenderRequest (node_modules\next\src\server\next-server.ts:1034:6)
+    at async DevServer.handleRequestImpl (node_modules\next\src\server\base-server.ts:1462:8) 
+    at async (node_modules\next\src\server\dev\next-dev-server.ts:514:13)
+    at async Span.traceAsyncFn (node_modules\next\src\trace\trace.ts:143:13)
+    at async DevServer.handleRequest (node_modules\next\src\server\dev\next-dev-server.ts:512:19)
+    at async invokeRender (node_modules\next\src\server\lib\router-server.ts:284:10)
+    at async handleRequest (node_modules\next\src\server\lib\router-server.ts:530:15)
+    at async requestHandlerImpl (node_modules\next\src\server\lib\router-server.ts:576:6)     
+    at async Server.requestListener (node_modules\next\src\server\lib\start-server.ts:146:6)  
+  1 | import { PrismaClient } from "@prisma/client/extension";
+  2 | const globalPrisma = global as unknown as { prisma: PrismaClient };
+> 3 | export const prisma = globalPrisma.prisma || new PrismaClient();
+    |                                             ^
+  4 | if (process.env.NODE_ENV !== "production") {
+  5 |   globalPrisma.prisma = prisma;
+  6 | } {
+  page: '/'
+}
+ ⨯ Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\michal.stehlik\source\repos\my-db-next-app\node_modules\@prisma\client\scripts\default-index.js:43:11)
+    at eval (src\lib\prisma.ts:3:45)
+    at (rsc)/./src/lib/prisma.ts (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:213:1)
+    at __webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at eval (webpack-internal:///(rsc)/./src/app/page.tsx:9:69)
+    at (rsc)/./src/app/page.tsx (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:202:1)
+    at Function.__webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at async getLayoutOrPageModule (webpack://next/dist/src/server/lib/app-dir-module.ts:29:10)
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:166:35)
+    at async (webpack://next/dist/src/server/app-render/create-component-tree.tsx:406:27)     
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:337:27)
+    at async getRSCPayload (webpack://next/dist/src/server/app-render/app-render.tsx:731:19)  
+    at async renderToStream (webpack://next/dist/src/server/app-render/app-render.tsx:1656:25)    at async renderToHTMLOrFlightImpl (webpack://next/dist/src/server/app-render/app-render.tsx:1353:19)
+    at async doRender (node_modules\next\src\server\base-server.ts:2666:21)
+    at async responseGenerator (node_modules\next\src\server\base-server.ts:3027:21)
+    at async DevServer.renderToResponseWithComponentsImpl (node_modules\next\src\server\base-server.ts:3039:23)
+    at async DevServer.renderPageComponent (node_modules\next\src\server\base-server.ts:3597:15)
+    at async DevServer.renderToResponseImpl (node_modules\next\src\server\base-server.ts:3659:23)
+    at async DevServer.pipeImpl (node_modules\next\src\server\base-server.ts:1698:20)
+    at async NextNodeServer.handleCatchallRenderRequest (node_modules\next\src\server\next-server.ts:1034:6)
+    at async DevServer.handleRequestImpl (node_modules\next\src\server\base-server.ts:1462:8) 
+    at async (node_modules\next\src\server\dev\next-dev-server.ts:514:13)
+    at async Span.traceAsyncFn (node_modules\next\src\trace\trace.ts:143:13)
+    at async DevServer.handleRequest (node_modules\next\src\server\dev\next-dev-server.ts:512:19)
+    at async invokeRender (node_modules\next\src\server\lib\router-server.ts:284:10)
+    at async handleRequest (node_modules\next\src\server\lib\router-server.ts:530:15)
+    at async requestHandlerImpl (node_modules\next\src\server\lib\router-server.ts:576:6)     
+    at async Server.requestListener (node_modules\next\src\server\lib\start-server.ts:146:6)  
+  1 | import { PrismaClient } from "@prisma/client/extension";
+  2 | const globalPrisma = global as unknown as { prisma: PrismaClient };
+> 3 | export const prisma = globalPrisma.prisma || new PrismaClient();
+    |                                             ^
+  4 | if (process.env.NODE_ENV !== "production") {
+  5 |   globalPrisma.prisma = prisma;
+  6 | } {
+  page: '/'
+}
+ GET / 500 in 576ms
+ ✓ Compiled /favicon.ico in 146ms (366 modules)
+ GET /favicon.ico 200 in 392ms
+Terminate batch job (Y/N)? 
+y
+
+C:\Users\michal.stehlik\source\repos\my-db-next-app>npx prisma generate
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+
+✔ Generated Prisma Client (v5.22.0) to .\node_modules\@prisma\client in 34ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Curious about the SQL queries Prisma ORM generates? Optimize helps you enhance your visibility: https://pris.ly/tip-2-optimize
+
+
+C:\Users\michal.stehlik\source\repos\my-db-next-app>npm run dev
+
+> my-db-next-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.0.3
+   - Local:        http://localhost:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1747ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.3s (576 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 200 in 2515ms
+ ⨯ Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\michal.stehlik\source\repos\my-db-next-app\node_modules\@prisma\client\scripts\default-index.js:43:11)
+    at eval (src\lib\prisma.ts:3:45)
+    at (rsc)/./src/lib/prisma.ts (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:213:1)
+    at __webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at eval (webpack-internal:///(rsc)/./src/app/page.tsx:9:69)
+    at (rsc)/./src/app/page.tsx (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:202:1)
+    at Function.__webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at async getLayoutOrPageModule (webpack://next/dist/src/server/lib/app-dir-module.ts:29:10)
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:166:35)
+    at async (webpack://next/dist/src/server/app-render/create-component-tree.tsx:406:27)     
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:337:27)
+    at async getRSCPayload (webpack://next/dist/src/server/app-render/app-render.tsx:731:19)  
+    at async renderToStream (webpack://next/dist/src/server/app-render/app-render.tsx:1656:25)    at async renderToHTMLOrFlightImpl (webpack://next/dist/src/server/app-render/app-render.tsx:1353:19)
+    at async doRender (node_modules\next\src\server\base-server.ts:2666:21)
+    at async responseGenerator (node_modules\next\src\server\base-server.ts:3027:21)
+    at async DevServer.renderToResponseWithComponentsImpl (node_modules\next\src\server\base-server.ts:3039:23)
+    at async DevServer.renderPageComponent (node_modules\next\src\server\base-server.ts:3597:15)
+    at async DevServer.renderToResponseImpl (node_modules\next\src\server\base-server.ts:3659:23)
+    at async DevServer.pipeImpl (node_modules\next\src\server\base-server.ts:1698:20)
+    at async NextNodeServer.handleCatchallRenderRequest (node_modules\next\src\server\next-server.ts:1034:6)
+    at async DevServer.handleRequestImpl (node_modules\next\src\server\base-server.ts:1462:8) 
+    at async (node_modules\next\src\server\dev\next-dev-server.ts:514:13)
+    at async Span.traceAsyncFn (node_modules\next\src\trace\trace.ts:143:13)
+    at async DevServer.handleRequest (node_modules\next\src\server\dev\next-dev-server.ts:512:19)
+    at async invokeRender (node_modules\next\src\server\lib\router-server.ts:284:10)
+    at async handleRequest (node_modules\next\src\server\lib\router-server.ts:530:15)
+    at async requestHandlerImpl (node_modules\next\src\server\lib\router-server.ts:576:6)     
+    at async Server.requestListener (node_modules\next\src\server\lib\start-server.ts:146:6)  
+  1 | import { PrismaClient } from "@prisma/client/extension";
+  2 | const globalPrisma = global as unknown as { prisma: PrismaClient };
+> 3 | export const prisma = globalPrisma.prisma || new PrismaClient();
+    |                                             ^
+  4 | if (process.env.NODE_ENV !== "production") {
+  5 |   globalPrisma.prisma = prisma;
+  6 | } {
+  page: '/'
+}
+ GET /_next/static/webpack/07835ac80bab1e53.webpack.hot-update.json 404 in 2847ms
+ ⨯ Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\michal.stehlik\source\repos\my-db-next-app\node_modules\@prisma\client\scripts\default-index.js:43:11)
+    at eval (src\lib\prisma.ts:3:45)
+    at (rsc)/./src/lib/prisma.ts (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:213:1)
+    at __webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at eval (webpack-internal:///(rsc)/./src/app/page.tsx:9:69)
+    at (rsc)/./src/app/page.tsx (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:202:1)
+    at Function.__webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at async getLayoutOrPageModule (webpack://next/dist/src/server/lib/app-dir-module.ts:29:10)
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:166:35)
+    at async (webpack://next/dist/src/server/app-render/create-component-tree.tsx:406:27)     
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:337:27)
+    at async getRSCPayload (webpack://next/dist/src/server/app-render/app-render.tsx:731:19)  
+    at async renderToStream (webpack://next/dist/src/server/app-render/app-render.tsx:1656:25)    at async renderToHTMLOrFlightImpl (webpack://next/dist/src/server/app-render/app-render.tsx:1353:19)
+    at async doRender (node_modules\next\src\server\base-server.ts:2666:21)
+    at async responseGenerator (node_modules\next\src\server\base-server.ts:3027:21)
+    at async DevServer.renderToResponseWithComponentsImpl (node_modules\next\src\server\base-server.ts:3039:23)
+    at async DevServer.renderPageComponent (node_modules\next\src\server\base-server.ts:3597:15)
+    at async DevServer.renderToResponseImpl (node_modules\next\src\server\base-server.ts:3659:23)
+    at async DevServer.pipeImpl (node_modules\next\src\server\base-server.ts:1698:20)
+    at async NextNodeServer.handleCatchallRenderRequest (node_modules\next\src\server\next-server.ts:1034:6)
+    at async DevServer.handleRequestImpl (node_modules\next\src\server\base-server.ts:1462:8) 
+    at async (node_modules\next\src\server\dev\next-dev-server.ts:514:13)
+    at async Span.traceAsyncFn (node_modules\next\src\trace\trace.ts:143:13)
+    at async DevServer.handleRequest (node_modules\next\src\server\dev\next-dev-server.ts:512:19)
+    at async invokeRender (node_modules\next\src\server\lib\router-server.ts:284:10)
+    at async handleRequest (node_modules\next\src\server\lib\router-server.ts:530:15)
+    at async requestHandlerImpl (node_modules\next\src\server\lib\router-server.ts:576:6)     
+    at async Server.requestListener (node_modules\next\src\server\lib\start-server.ts:146:6)  
+  1 | import { PrismaClient } from "@prisma/client/extension";
+  2 | const globalPrisma = global as unknown as { prisma: PrismaClient };
+> 3 | export const prisma = globalPrisma.prisma || new PrismaClient();
+    |                                             ^
+  4 | if (process.env.NODE_ENV !== "production") {
+  5 |   globalPrisma.prisma = prisma;
+  6 | } {
+  page: '/'
+}
+ GET / 500 in 355ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 649ms (817 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\michal.stehlik\source\repos\my-db-next-app\node_modules\@prisma\client\scripts\default-index.js:43:11)
+    at eval (src\lib\prisma.ts:3:45)
+    at (rsc)/./src/lib/prisma.ts (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:213:1)
+    at __webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at eval (webpack-internal:///(rsc)/./src/app/page.tsx:9:69)
+    at (rsc)/./src/app/page.tsx (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:202:1)
+    at Function.__webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at async getLayoutOrPageModule (webpack://next/dist/src/server/lib/app-dir-module.ts:29:10)
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:166:35)
+    at async (webpack://next/dist/src/server/app-render/create-component-tree.tsx:406:27)     
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:337:27)
+    at async getRSCPayload (webpack://next/dist/src/server/app-render/app-render.tsx:731:19)  
+    at async renderToStream (webpack://next/dist/src/server/app-render/app-render.tsx:1656:25)    at async renderToHTMLOrFlightImpl (webpack://next/dist/src/server/app-render/app-render.tsx:1353:19)
+    at async doRender (node_modules\next\src\server\base-server.ts:2666:21)
+    at async responseGenerator (node_modules\next\src\server\base-server.ts:3027:21)
+    at async DevServer.renderToResponseWithComponentsImpl (node_modules\next\src\server\base-server.ts:3039:23)
+    at async DevServer.renderPageComponent (node_modules\next\src\server\base-server.ts:3597:15)
+    at async DevServer.renderToResponseImpl (node_modules\next\src\server\base-server.ts:3659:23)
+    at async DevServer.pipeImpl (node_modules\next\src\server\base-server.ts:1698:20)
+    at async NextNodeServer.handleCatchallRenderRequest (node_modules\next\src\server\next-server.ts:1034:6)
+    at async DevServer.handleRequestImpl (node_modules\next\src\server\base-server.ts:1462:8) 
+    at async (node_modules\next\src\server\dev\next-dev-server.ts:514:13)
+    at async Span.traceAsyncFn (node_modules\next\src\trace\trace.ts:143:13)
+    at async DevServer.handleRequest (node_modules\next\src\server\dev\next-dev-server.ts:512:19)
+    at async invokeRender (node_modules\next\src\server\lib\router-server.ts:284:10)
+    at async handleRequest (node_modules\next\src\server\lib\router-server.ts:530:15)
+    at async requestHandlerImpl (node_modules\next\src\server\lib\router-server.ts:576:6)     
+    at async Server.requestListener (node_modules\next\src\server\lib\start-server.ts:146:6)  
+  1 | import { PrismaClient } from "@prisma/client/extension";
+  2 | const globalPrisma = global as unknown as { prisma: PrismaClient };
+> 3 | export const prisma = globalPrisma.prisma || new PrismaClient();
+    |                                             ^
+  4 | if (process.env.NODE_ENV !== "production") {
+  5 |   globalPrisma.prisma = prisma;
+  6 | } {
+  page: '/'
+}
+ GET / 500 in 762ms
+ GET /_next/static/webpack/07835ac80bab1e53.webpack.hot-update.json 404 in 763ms
+ ⨯ Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+    at new PrismaClient (C:\Users\michal.stehlik\source\repos\my-db-next-app\node_modules\@prisma\client\scripts\default-index.js:43:11)
+    at eval (src\lib\prisma.ts:3:45)
+    at (rsc)/./src/lib/prisma.ts (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:213:1)
+    at __webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at eval (webpack-internal:///(rsc)/./src/app/page.tsx:9:69)
+    at (rsc)/./src/app/page.tsx (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\app\page.js:202:1)
+    at Function.__webpack_require__ (C:\Users\michal.stehlik\source\repos\my-db-next-app\.next\server\webpack-runtime.js:33:42)
+    at async getLayoutOrPageModule (webpack://next/dist/src/server/lib/app-dir-module.ts:29:10)
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:166:35)
+    at async (webpack://next/dist/src/server/app-render/create-component-tree.tsx:406:27)     
+    at async createComponentTreeInternal (webpack://next/dist/src/server/app-render/create-component-tree.tsx:337:27)
+    at async getRSCPayload (webpack://next/dist/src/server/app-render/app-render.tsx:731:19)  
+    at async renderToStream (webpack://next/dist/src/server/app-render/app-render.tsx:1656:25)    at async renderToHTMLOrFlightImpl (webpack://next/dist/src/server/app-render/app-render.tsx:1353:19)
+    at async doRender (node_modules\next\src\server\base-server.ts:2666:21)
+    at async responseGenerator (node_modules\next\src\server\base-server.ts:3027:21)
+    at async DevServer.renderToResponseWithComponentsImpl (node_modules\next\src\server\base-server.ts:3039:23)
+    at async DevServer.renderPageComponent (node_modules\next\src\server\base-server.ts:3597:15)
+    at async DevServer.renderToResponseImpl (node_modules\next\src\server\base-server.ts:3659:23)
+    at async DevServer.pipeImpl (node_modules\next\src\server\base-server.ts:1698:20)
+    at async NextNodeServer.handleCatchallRenderRequest (node_modules\next\src\server\next-server.ts:1034:6)
+    at async DevServer.handleRequestImpl (node_modules\next\src\server\base-server.ts:1462:8) 
+    at async (node_modules\next\src\server\dev\next-dev-server.ts:514:13)
+    at async Span.traceAsyncFn (node_modules\next\src\trace\trace.ts:143:13)
+    at async DevServer.handleRequest (node_modules\next\src\server\dev\next-dev-server.ts:512:19)
+    at async invokeRender (node_modules\next\src\server\lib\router-server.ts:284:10)
+    at async handleRequest (node_modules\next\src\server\lib\router-server.ts:530:15)
+    at async requestHandlerImpl (node_modules\next\src\server\lib\router-server.ts:576:6)     
+    at async Server.requestListener (node_modules\next\src\server\lib\start-server.ts:146:6)  
+  1 | import { PrismaClient } from "@prisma/client/extension";
+  2 | const globalPrisma = global as unknown as { prisma: PrismaClient };
+> 3 | export const prisma = globalPrisma.prisma || new PrismaClient();
+    |                                             ^
+  4 | if (process.env.NODE_ENV !== "production") {
+  5 |   globalPrisma.prisma = prisma;
+  6 | } {
+  page: '/'
+}
+ GET / 500 in 224ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1192ms (367 modules)
+ GET /favicon.ico 200 in 1272ms
+ ⨯ ./src/lib/prisma.ts
+Error:   × Unterminated block comment
+   ╭─[C:\Users\michal.stehlik\source\repos\my-db-next-app\src\lib\prisma.ts:7:1]
+ 4 │ export const prisma = globalPrisma.prisma || new PrismaClient();
+ 5 │ if (process.env.NODE_ENV !== "production") {
+ 6 │   globalPrisma.prisma = prisma;
+ 7 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/lib/prisma.ts
+./src/app/page.tsx
+ ✓ Compiled in 79ms (366 modules)
+ ⨯ src\app\page.tsx (6:24) @ user
+ ⨯ TypeError: Cannot read properties of undefined (reading 'user')
+    at Home (./src/app/page.tsx:15:67)
+    at stringify (<anonymous>)
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+digest: "2019379242"
+  4 |
+  5 | export default function Home() {
+> 6 |   const users = prisma.user.findMany();
+    |                        ^
+  7 |   return (
+  8 |     <div className={styles.page}>
+  9 |       {users.map((user: User) => (
+ GET / 500 in 107ms
+ GET /favicon.ico 200 in 12ms
+ ✓ Compiled in 76ms (366 modules)
+ ⨯ src\app\page.tsx (6:24) @ user
+ ⨯ TypeError: Cannot read properties of undefined (reading 'user')
+    at Home (./src/app/page.tsx:15:67)
+    at stringify (<anonymous>)
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+digest: "2019379242"
+  4 |
+  5 | export default function Home() {
+> 6 |   const users = prisma.user.findMany();
+    |                        ^
+  7 |   return (
+  8 |     <div className={styles.page}>
+  9 |       {users.map((user: User) => (
+ GET / 500 in 69ms
+ GET /favicon.ico 200 in 8ms
+ ⚠ ./src/app/page.tsx
+Attempted import error: 'prisma' is not exported from '../lib/prisma' (imported as 'prisma'). 
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⨯ src\app\page.tsx (6:17) @ prisma
+ ⨯ TypeError: Cannot read properties of undefined (reading 'user')
+    at Home (./src/app/page.tsx:14:67)
+    at stringify (<anonymous>)
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+digest: "315170315"
+  4 |
+  5 | export default function Home() {
+> 6 |   const users = prisma.user.findMany();
+    |                 ^
+  7 |   return (
+  8 |     <div className={styles.page}>
+  9 |       {users.map((user: User) => (
+ GET / 500 in 67ms
+ GET /favicon.ico 200 in 9ms
+ ⚠ ./src/app/page.tsx
+Attempted import error: 'prisma' is not exported from '../lib/prisma' (imported as 'prisma'). 
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⨯ src\app\page.tsx (6:17) @ prisma
+ ⨯ TypeError: Cannot read properties of undefined (reading 'user')
+    at Home (./src/app/page.tsx:14:67)
+    at stringify (<anonymous>)
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+digest: "315170315"
+  4 |
+  5 | export default function Home() {
+> 6 |   const users = prisma.user.findMany();
+    |                 ^
+  7 |   return (
+  8 |     <div className={styles.page}>
+  9 |       {users.map((user: User) => (
+ GET / 500 in 41ms
+ GET /favicon.ico 200 in 8ms
+ ⨯ src\app\page.tsx (6:17) @ prisma
+ ⨯ TypeError: Cannot read properties of undefined (reading 'user')
+    at Home (./src/app/page.tsx:14:67)
+    at stringify (<anonymous>)
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+digest: "315170315"
+  4 |
+  5 | export default function Home() {
+> 6 |   const users = prisma.user.findMany();
+    |                 ^
+  7 |   return (
+  8 |     <div className={styles.page}>
+  9 |       {users.map((user: User) => (
+ GET / 500 in 17ms
+ GET /favicon.ico 200 in 5ms
+ ⨯ ./src/app/page.tsx
+Error:   × Expected ',', got '}'
+   ╭─[C:\Users\michal.stehlik\source\repos\my-db-next-app\src\app\page.tsx:2:1]
+ 1 │ import styles from "./page.module.css";
+ 2 │ import prisma } from "../lib/prisma";
+   ·               ─
+ 3 │ import { User } from "@prisma/client";
+ 4 │
+ 5 │ export default function Home() {
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 179ms (829 modules)
+ GET / 200 in 162ms
+ ⨯ src\app\page.tsx (9:14) @ map
+ ⨯ TypeError: users.map is not a function
+    at Home (./src/app/page.tsx:17:25)
+    at stringify (<anonymous>)
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+digest: "2027230286"
+   7 |   return (
+   8 |     <div className={styles.page}>
+>  9 |       {users.map((user: User) => (
+     |              ^
+  10 |         <div key={user.id}>{user.email}</div>
+  11 |       ))}
+  12 |     </div>
+ ⨯ src\app\page.tsx (9:14) @ map
+ ⨯ TypeError: users.map is not a function
+    at Home (./src/app/page.tsx:17:25)
+    at stringify (<anonymous>)
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+digest: "2027230286"
+   7 |   return (
+   8 |     <div className={styles.page}>
+>  9 |       {users.map((user: User) => (
+     |              ^
+  10 |         <div key={user.id}>{user.email}</div>
+  11 |       ))}
+  12 |     </div>
+ GET / 500 in 17ms
+ GET /favicon.ico 200 in 8ms
+ ⨯ src\app\page.tsx (9:14) @ map
+ ⨯ TypeError: users.map is not a function
+    at Home (./src/app/page.tsx:17:25)
+    at stringify (<anonymous>)
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+digest: "2027230286"
+   7 |   return (
+   8 |     <div className={styles.page}>
+>  9 |       {users.map((user: User) => (
+     |              ^
+  10 |         <div key={user.id}>{user.email}</div>
+  11 |       ))}
+  12 |     </div>
+ GET / 500 in 17ms
+ GET /favicon.ico 200 in 6ms
+ ⨯ src\app\page.tsx (9:14) @ map
+ ⨯ TypeError: users.map is not a function
+    at Home (./src/app/page.tsx:17:25)
+    at stringify (<anonymous>)
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+digest: "2027230286"
+   7 |   return (
+   8 |     <div className={styles.page}>
+>  9 |       {users.map((user: User) => (
+     |              ^
+  10 |         <div key={user.id}>{user.email}</div>
+  11 |       ))}
+  12 |     </div>
+ GET / 500 in 16ms
+ GET /favicon.ico 200 in 6ms
+ ✓ Compiled in 85ms (364 modules)
+ ⨯ src\app\page.tsx (6:17) @ asyprisma
+ ⨯ ReferenceError: asyprisma is not defined
+    at Home (./src/app/page.tsx:12:19)
+    at stringify (<anonymous>)
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+digest: "741837943"
+  4 |
+  5 | export default function Home() {
+> 6 |   const users = asyprisma.user.findMany();
+    |                 ^
+  7 |   return (
+  8 |     <div className={styles.page}>
+  9 |       {users.map((user: User) => (
+ GET / 500 in 48ms
+ GET /favicon.ico 200 in 7ms
+ ⨯ ./src/app/page.tsx
+Error:   × Expected '=>', got '.'
+   ╭─[C:\Users\michal.stehlik\source\repos\my-db-next-app\src\app\page.tsx:6:1]
+ 3 │ import { User } from "@prisma/client";
+ 4 │
+ 5 │ export default function Home() {
+ 6 │   const users = async prisma.user.findMany();
+   ·                             ─
+ 7 │   return (
+ 8 │     <div className={styles.page}>
+ 9 │       {users.map((user: User) => (
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 158ms (827 modules)
+ GET / 200 in 147ms
+ ⨯ src\app\page.tsx (6:17) @ aprisma
+ ⨯ ReferenceError: aprisma is not defined
+    at Home (./src/app/page.tsx:12:19)
+    at stringify (<anonymous>)
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+digest: "1838348087"
+  4 |
+  5 | export default function Home() {
+> 6 |   const users = aprisma.user.findMany();
+    |                 ^
+  7 |   return (
+  8 |     <div className={styles.page}>
+  9 |       {users.map((user: User) => (
+ ⨯ src\app\page.tsx (6:17) @ aprisma
+ ⨯ ReferenceError: aprisma is not defined
+    at Home (./src/app/page.tsx:12:19)
+    at stringify (<anonymous>)
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+digest: "1838348087"
+  4 |
+  5 | export default function Home() {
+> 6 |   const users = aprisma.user.findMany();
+    |                 ^
+  7 |   return (
+  8 |     <div className={styles.page}>
+  9 |       {users.map((user: User) => (
+ GET / 500 in 20ms
+ GET /favicon.ico 200 in 14ms
+ ⨯ ./src/app/page.tsx
+Error:   × await isn't allowed in non-async function
+   ╭─[C:\Users\michal.stehlik\source\repos\my-db-next-app\src\app\page.tsx:6:1]
+ 3 │ import { User } from "@prisma/client";
+ 4 │
+ 5 │ export default function Home() {
+ 6 │   const users = await prisma.user.findMany();
+   ·                       ──────
+ 7 │   return (
+ 8 │     <div className={styles.page}>
+ 9 │       {users.map((user: User) => (
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./src/app/page.tsx
+Error:   × Expected ';', got 'Home'
+   ╭─[C:\Users\michal.stehlik\source\repos\my-db-next-app\src\app\page.tsx:5:1]
+ 2 │ import prisma from "../lib/prisma";
+ 3 │ import { User } from "@prisma/client";
+ 4 │
+ 5 │ export default asyfunction Home() {
+   ·                            ────
+ 6 │   const users = await prisma.user.findMany();
+ 7 │   return (
+ 8 │     <div className={styles.page}>
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⨯ ./src/app/page.tsx
+Error:   × Expected ';', got 'Home'
+   ╭─[C:\Users\michal.stehlik\source\repos\my-db-next-app\src\app\page.tsx:5:1]
+ 2 │ import prisma from "../lib/prisma";
+ 3 │ import { User } from "@prisma/client";
+ 4 │
+ 5 │ export default asyfunction Home() {
+   ·                            ────
+ 6 │   const users = await prisma.user.findMany();
+ 7 │   return (
+ 8 │     <div className={styles.page}>
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ GET / 500 in 951ms
+ GET /favicon.ico 500 in 3ms
+ ✓ Compiled /_not-found in 276ms (832 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 200 in 7ms
+ GET /_next/static/webpack/c0f6e3f499afeeef.webpack.hot-update.json 404 in 331ms
+ GET / 200 in 30ms
+ GET /favicon.ico 200 in 10ms
+ GET / 200 in 13ms
+ GET /favicon.ico 200 in 4ms
+ ✓ Compiled in 85ms (367 modules)
+ GET / 200 in 31ms
+ ✓ Compiled in 78ms (367 modules)
+ GET / 200 in 24ms
+ ✓ Compiled in 74ms (367 modules)
+ GET / 200 in 27ms
+ ✓ Compiled in 79ms (367 modules)
+ GET / 200 in 34ms
+ GET /favicon.ico 200 in 9ms
+ ✓ Compiled in 66ms (367 modules)
+ GET / 200 in 26ms
+ ⨯ ./src/app/page.tsx
+Error:   × Unexpected token `div`. Expected jsx identifier
+    ╭─[C:\Users\michal.stehlik\source\repos\my-db-next-app\src\app\page.tsx:8:1]
+  5 │ export default async function Home() {
+  6 │   const users = await prisma.user.findMany();
+  7 │   return (
+  8 │     <div className={styles.page}>
+    ·      ───
+  9 │       <h1>Users</hjson>
+ 10 │       {users.map((user: User) => (
+ 11 │         <div key={user.id}>-- {user.email}</div>
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⨯ ./src/app/page.tsx
+Error:   × Unexpected token `div`. Expected jsx identifier
+    ╭─[C:\Users\michal.stehlik\source\repos\my-db-next-app\src\app\page.tsx:8:1]
+  5 │ export default async function Home() {
+  6 │   const users = await prisma.user.findMany();
+  7 │   return (
+  8 │     <div className={styles.page}>
+    ·      ───
+  9 │       <h1>Users</h>
+ 10 │       {users.map((user: User) => (
+ 11 │         <div key={user.id}>-- {user.email}</div>
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ✓ Compiled in 108ms (832 modules)
+ GET / 200 in 28ms
+Terminate batch job (Y/N)? 
+y
+
+C:\Users\michal.stehlik\source\repos\my-db-next-app>npx ts-node prisma/seed.ts
+Need to install the following packages:
+ts-node@10.9.2
+Ok to proceed? (y) y
+
+TypeError: Unknown file extension ".ts" for C:\Users\michal.stehlik\source\repos\my-db-next-app\prisma\seed.ts
+    at Object.getFileProtocolModuleFormat [as file:] (node:internal/modules/esm/get_format:218:9)
+    at defaultGetFormat (node:internal/modules/esm/get_format:244:36)
+    at defaultLoad (node:internal/modules/esm/load:122:22)
+    at async ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:479:32)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:112:19) {
+  code: 'ERR_UNKNOWN_FILE_EXTENSION'
+}
+
+C:\Users\michal.stehlik\source\repos\my-db-next-app>npx prisma db seed
+Environment variables loaded from .env
+Error: To configure seeding in your project you need to add a "prisma.seed" property in your package.json with the command to execute it:
+
+1. Open the package.json of your project
+2. Add the following example to it:
+```
+"prisma": {
+  "seed": "ts-node prisma\seed.ts"
+}
+```
+If you are using ESM (ECMAScript modules):
+```
+"prisma": {
+  "seed": "node --loader ts-node/esm prisma\seed.ts"
+}
+```
+
+3. Install the required dependencies by running:
+npm i -D ts-node typescript @types/node
+
+More information in our documentation:
+https://pris.ly/d/seeding
+
+C:\Users\michal.stehlik\source\repos\my-db-next-app>npm i -D ts-node typescript @types/node
+
+added 16 packages, and audited 421 packages in 1s
+
+127 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\michal.stehlik\source\repos\my-db-next-app>npx prisma db seed
+Environment variables loaded from .env
+Error: To configure seeding in your project you need to add a "prisma.seed" property in your package.json with the command to execute it:
+
+1. Open the package.json of your project
+2. Add the following example to it:
+```
+"prisma": {
+  "seed": "ts-node prisma\seed.ts"
+}
+```
+If you are using ESM (ECMAScript modules):
+```
+"prisma": {
+  "seed": "node --loader ts-node/esm prisma\seed.ts"
+}
+```
+
+3. Install the required dependencies by running:
+npm i -D ts-node typescript @types/node
+
+More information in our documentation:
+https://pris.ly/d/seeding
+
+C:\Users\michal.stehlik\source\repos\my-db-next-app>npx prisma db seed
+Environment variables loaded from .env
+Running seed command `ts-node --compiler-options {"module":"CommonJS"} prisma/seed.ts` ...
+
+The seed command has been executed.
+
+C:\Users\michal.stehlik\source\repos\my-db-next-app>npm run dev
+
+> my-db-next-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.0.3
+   - Local:        http://localhost:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 1939ms (592 modules)
+ GET / 200 in 2218ms
+ ✓ Compiled /favicon.ico in 122ms (321 modules)
+ GET /favicon.ico 200 in 196ms
